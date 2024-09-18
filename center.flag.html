@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center the content vertically */
+            background-color: #f0f0f0;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .stick {
+            height: 450px;
+            width: 10px;
+            background: black;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .flag {
+            width: 270px;
+            height: 180px;
+            box-shadow: 0px 0px 90px 1px #989;
+            background-color: transparent;
+            position: absolute;
+            top: 0; /* Attach flag to the top of the stick */
+            left: 10px; /* Align flag beside the stick */
+        }
+
+        .top {
+            height: 60px;
+            background-color: #ff9933;
+        }
+
+        .middle {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bottom {
+            height: 60px;
+            background-color: green;
+        }
+
+        .wheel {
+            height: 43px;
+            width: 43px;
+            border: 1px solid darkblue;
+            border-radius: 50%;
+            position: relative;
+            animation: spin 5s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wheel .line {
+            height: 100%;
+            width: 1px;
+            background: darkblue;
+            position: absolute;
+            left: 50%;
+        }
+
+        .line:nth-child(1) {
+            transform: rotate(15deg);
+        }
+
+        .line:nth-child(2) {
+            transform: rotate(30deg);
+        }
+
+        .line:nth-child(3) {
+            transform: rotate(45deg);
+        }
+
+        .line:nth-child(4) {
+            transform: rotate(60deg);
+        }
+
+        .line:nth-child(5) {
+            transform: rotate(75deg);
+        }
+
+        .line:nth-child(6) {
+            transform: rotate(90deg);
+        }
+
+        .line:nth-child(7) {
+            transform: rotate(105deg);
+        }
+
+        .line:nth-child(8) {
+            transform: rotate(120deg);
+        }
+
+        .line:nth-child(9) {
+            transform: rotate(135deg);
+        }
+
+        .line:nth-child(10) {
+            transform: rotate(150deg);
+        }
+
+        .line:nth-child(11) {
+            transform: rotate(165deg);
+        }
+
+        .line:nth-child(12) {
+            transform: rotate(180deg);
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .wave {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(128deg, rgba(89, 72, 21, 0) 39%, rgba(250, 245, 245, 0.85) 46%, rgba(89, 72, 21, 0) 53%);
+            animation: wave 10s linear infinite;
+        }
+
+        @keyframes wave {
+            0% {
+                background-position: -400px 0px;
+            }
+
+            100% {
+                background-position: 800px 0px;
+            }
+        }
+    </style>
+    <title>Centered Flag and Pipe</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="stick"></div>
+        <div class="flag">
+            <div class="wave"></div>
+            <div class="top"></div>
+            <div class="middle">
+                <div class="wheel">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+</body>
+
+</html>
